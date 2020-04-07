@@ -4,8 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="title" content="You can't speedrun Polygon's gaming podcast, you can speedrun this.">
+  <meta name="description" content="While you can't speedrun Polygon's oddly named gaming podcast, you can speedrun this. Compete against your friends for the best times.">
+  <meta name="keywords" content="polygon, podcast, meme, speedrunning, speedrun">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="author" content="Tristan Kennedy">
   <title>Polygon | A Speedrun about Podcasts</title>
-  <!-- <meta http-equiv="refresh" content="2;url=https://speedrun.com/" /> -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" charset="utf-8"></script>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script type="text/javascript">
@@ -26,7 +32,9 @@
         'Initiating BLJ (YahoooYaYaYaYaYahoo)',
         'Taking damage boost',
         'Saved some frames',
-        'Attempting carpetless'
+        'Attempting carpetless',
+        'Marathon Luck',
+        'Pray to RNGesus'
       ];
       function speedTimer() {
         if (run){
@@ -39,7 +47,7 @@
           }
           if (rand(123)==42) {speedrunTricks();}
         }
-        $(".timer").text(mins+":"+(secs<10?'0':'')+secs.toFixed(2)+"min")
+        $(".timer").text(mins+":"+(secs<10?'0':'')+secs.toFixed(2)+" min")
       }
 
       function speedrunTricks(){
@@ -48,6 +56,7 @@
           if (rand(100)==7){
             run = false;
             $('.timer').css('color','#0cf50c');
+            $('.actions').text("And Time!")
           }
         }
       }
