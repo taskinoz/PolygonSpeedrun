@@ -56,7 +56,8 @@
           if (rand(100)==7){
             run = false;
             $('.timer').css('color','#0cf50c');
-            $('.actions').text("And Time!")
+            $('.actions').text("And Time!");
+            $('button[name="start"]').prop('disabled', true);
           }
         }
       }
@@ -69,6 +70,7 @@
           $('.actions').html('&nbsp;');
         }
         $('timer').removeAttr('style');
+        $('button[name="start"]').text("Start").prop('disabled', false);
       }
       function startstop() {
         if (run) {
@@ -144,6 +146,19 @@
       color: #000;
       background: #fff;
       border: 0;
+      transition: 0.3s;
+      transform: translateY(0);
+    }
+    .buttons button:hover{
+      background: #ddd;
+    }
+    .buttons button:active{
+      background: #ccc;
+      transform: translateY(1px);
+    }
+    .buttons button:disabled{
+      background: #bbb;
+      color: #444;
     }
     .buttons button:nth-child(odd){
       border-right: 1px solid #ccc;
